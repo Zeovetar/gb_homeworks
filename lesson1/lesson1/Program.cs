@@ -6,7 +6,11 @@ namespace lesson1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            Console.InputEncoding = System.Text.Encoding.Unicode;
+            Console.WriteLine("Привет друг! Как тебя зовут? Напиши свое имя ниже!");
+            string username = Console.ReadLine();
+            Console.WriteLine($"Привет, {username}, сегодня {DateTime.Now.ToShortDateString()}");
         }
     }
 }

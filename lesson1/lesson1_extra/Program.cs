@@ -8,15 +8,24 @@ namespace lesson1_extra
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.InputEncoding = System.Text.Encoding.Unicode;
-            int i = 1;
-            int j = 0;
+            int i = 0;
             Console.WriteLine("Первые 100 чисел FizzBuzz (Числа делящиеся и на 3 и на 5 без остатка)");
-            while (j < 100)
+            while (i < 100)
             {
-                if ((i % 3 == 0) && (i % 5 == 0))
+                switch(i)
                 {
-                    Console.Write($"{i}, ");
-                    j++;
+                    case (> 0) when i % 3 == 0 && i % 5 != 0:
+                        Console.Write("Fizz ");
+                        break;
+                    case (> 0) when i % 5 == 0 && i % 3 != 0:
+                        Console.Write("Buzz ");
+                        break;
+                    case (> 0) when i % 15 == 0:
+                        Console.Write("FizzBuzz ");
+                        break;
+                    default:
+                        Console.Write($"{i} ");
+                        break;
                 }
                 i++;
             }

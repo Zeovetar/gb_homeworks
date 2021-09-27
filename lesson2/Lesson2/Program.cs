@@ -16,15 +16,16 @@ namespace Lesson2
             float day_tMax = float.Parse(Console.ReadLine());
             float average_tDay = (day_tMax + day_tMin) / 2;
             Console.WriteLine($"Среднедневная температура = {average_tDay}"); //задача 1
-            int get_month = 0;
+            int get_month;
             Console.WriteLine("--------------------------------------------------------------------------------Задача 2:");
-            bool m_check = true;
-            bool m_winter = false;
+            bool m_check;
+            bool m_winter;
             do
             {
                 Console.WriteLine("Введите порядковый номер месяца:");
                 get_month = int.Parse(Console.ReadLine());
                 m_check = true;
+                m_winter = false;
                 switch (get_month)
                 {
                     case 0:

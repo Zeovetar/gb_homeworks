@@ -7,6 +7,7 @@ namespace lesson2_4
 
         static void Main(string[] args)
         {
+            //Проблемы с виндой, с локалью, не решил еще. Винда английская, без указания юникода вопросики вместо русских букв
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.InputEncoding = System.Text.Encoding.Unicode;
             

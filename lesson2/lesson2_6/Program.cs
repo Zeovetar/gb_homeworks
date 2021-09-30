@@ -46,7 +46,23 @@ namespace lesson2_6
                         Console.Write($" {office} |");
                     }
                 }
-                Console.WriteLine("\n");
+                Console.WriteLine();
+            }
+            Console.WriteLine("================================= Вариант2 ==============================================================\n");
+            foreach (officesScedule office1 in Enum.GetValues(typeof(officesScedule)))
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write($"{office1}: ");
+                Console.ResetColor();
+                foreach (day_of_week day1 in Enum.GetValues(typeof(day_of_week)))
+                {
+                    officesScedule result = (officesScedule)day1 & office1;
+                    if (result != 0)
+                    {
+                        Console.Write($" {day1} |");
+                    }
+                }
+                Console.WriteLine();
             }
             Console.WriteLine();
         }

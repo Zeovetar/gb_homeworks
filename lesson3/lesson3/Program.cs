@@ -44,7 +44,7 @@ namespace lesson3
             {
                 for (int j = 0; j < contacts.GetLength(1); j++)
                 {
-                    Console.Write($"{contacts[i, j]}: ");
+                    Console.Write($"{contacts[i, j]} ");
                 }
                 Console.WriteLine();
             }

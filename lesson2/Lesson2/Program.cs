@@ -24,6 +24,15 @@ namespace Lesson2
             {
                 Console.WriteLine("Введите порядковый номер месяца:");
                 get_month = int.Parse(Console.ReadLine());
+                Console.WriteLine("--------------------------------------------------------------------------------Задача 3:");
+                if (get_month % 2 == 0)
+                {
+                    Console.WriteLine($"Пользователь ввел четное число: {get_month}");
+                }
+                else
+                {
+                    Console.WriteLine($"Пользователь ввел нечетное число: {get_month}");
+                }
                 m_check = true;
                 m_winter = false;
                 switch (get_month)

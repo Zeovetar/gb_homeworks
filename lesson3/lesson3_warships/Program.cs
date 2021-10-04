@@ -47,7 +47,16 @@ namespace lesson3_warships
             {
                 Console.WriteLine($"{i + 1}-ый");
                 ship = Console.ReadLine().ToCharArray();
-                battlefield[(int)Char.GetNumericValue(ship[1]) - 1,alpha[ship[0]] - 1] = "X";
+                if (ship.GetLength(0) == 3)
+                {
+                    string str = Char.ToString(ship[1]) + Char.ToString(ship[2]);
+                    //Convert.ToInt32(str);
+                    battlefield[Int32.Parse(str) - 1, alpha[ship[0]] - 1] = "X";
+                }
+                else
+                {
+                    battlefield[(int)Char.GetNumericValue(ship[1]) - 1, alpha[ship[0]] - 1] = "X";
+                }
             }    
             //
             Console.WriteLine("Игровое поле:");

@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace lesson3
 {
     class Program
@@ -20,12 +21,13 @@ namespace lesson3
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine("Диагональ:");
             for (int i = 0; i < my_array.GetLength(0); i++)
             {
                 int j = i;
                 Console.Write($"{my_array[i, j]} ");
-                Console.WriteLine();
             }
+            Console.WriteLine();
             Console.WriteLine("----------------------------------------------------------------------Задача2");
             string[,] contacts = new string[5, 2];
             Console.WriteLine("Создаем телефонный справочник!");

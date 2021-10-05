@@ -9,7 +9,7 @@ namespace lesson3
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.InputEncoding = System.Text.Encoding.Unicode;
-            Console.WriteLine("----------------------------------------------------------------------Задача1");
+            Console.WriteLine("-----------------------------------------------------------------------Задача1");
             var rand = new Random();
             int[,] my_array = new int[5, 5];
             for (int i = 0; i < my_array.GetLength(0); i++)
@@ -28,7 +28,7 @@ namespace lesson3
                 Console.Write($"{my_array[i, j]} ");
             }
             Console.WriteLine();
-            Console.WriteLine("----------------------------------------------------------------------Задача2");
+            Console.WriteLine("-----------------------------------------------------------------------Задача2");
             string[,] contacts = new string[5, 2];
             Console.WriteLine("Создаем телефонный справочник!");
             for (int i = 0; i < contacts.GetLength(0); i++)
@@ -50,7 +50,7 @@ namespace lesson3
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("----------------------------------------------------------------------Задача3");
+            Console.WriteLine("-----------------------------------------------------------------------Задача3");
             Console.WriteLine("Введите строку, которая будет отображена в обратном порядке:");
             string rev_string = Console.ReadLine();
             int half = rev_string.Length / 2;

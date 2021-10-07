@@ -32,7 +32,7 @@ namespace lesson4
             do
             {
                 MakeItPretty(ref str, GetNames());
-                Console.WriteLine("Будем вводить следующего? Y\\N");
+                Console.WriteLine("Будем вводить следующего? Д\\Н");
                 string ans = Console.ReadLine().ToUpper();
                 if (ans == "Н") { stop = false; }
             } while (stop);

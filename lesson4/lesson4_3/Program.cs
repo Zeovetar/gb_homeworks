@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace lesson4_3
 {
@@ -17,10 +18,18 @@ namespace lesson4_3
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.InputEncoding = System.Text.Encoding.Unicode;
-            while (true)
+            int read;
+            do
             {
-                Console.WriteLine(GetSeason((Convert.ToInt32(Console.ReadLine()))));
-            }
+                Console.WriteLine("Введите порядковый номер месяца! (1-12)");
+                read = Convert.ToInt32(Console.ReadLine());
+                if (read < 1 || read > 12)
+                {
+                    Console.WriteLine("Вы ввели неверное число! Допустим ввод чисел от 1 до 12!");
+                }
+            } while (read < 1 || read > 12);
+                string ans = GetSeason(read);
+            Console.WriteLine($"Время года: {SeasonRus(ans)}");
         }
 
         static string GetSeason(int iter)
@@ -50,6 +59,21 @@ namespace lesson4_3
                 return step;
             }
 
+        }
+
+        static string SeasonRus(string SeasonRu)
+        {
+            Dictionary<string, string> RussianSeasons = new Dictionary<string, string>();
+            RussianSeasons.Add("Spring", "Весна");
+            RussianSeasons.Add("Summer", "Лето");
+            RussianSeasons.Add("Autumn", "Осень");
+            RussianSeasons.Add("Winter", "Зима");
+            string ans = "";
+            foreach (var seek in RussianSeasons)
+            {
+                if (seek.Key == SeasonRu) { ans = seek.Value; }
+            }
+            return ans;
         }
     }
 }

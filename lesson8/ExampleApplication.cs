@@ -1,12 +1,13 @@
 ﻿using System;
+using ExampleLibrary;
 
 namespace lesson8
 {
-    class Program
+    class ExampleApplication
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Greeting.SayHello();
         }
     }
 }
